@@ -36,14 +36,22 @@ const LoginForm = styled.form`
   border: 2px #29367c solid;
   border-radius: 4px;
   padding: 2rem 2rem 1rem 2rem;
+  width: 100%;
+  max-width: 500px;
   .id_password_box {
     border: 1px solid #dadada;
     border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px;
     .id_input_box,
     .password_input_box {
       display: flex;
       align-items: center;
       padding: 0 1rem;
+      width: 100%;
+      max-width: 500px;
       &.id_input_box {
         border-bottom: 1px solid #dadada;
       }
@@ -63,7 +71,7 @@ const LoginForm = styled.form`
         background-position: -129px -203px;
       }
       input {
-        width: 400px;
+        flex: 1;
         height: 48px;
         border: none;
         outline: none;
@@ -93,6 +101,9 @@ const LoginForm = styled.form`
     border: none;
     border-radius: 4px;
     cursor: pointer;
+  }
+  @media (max-width: 550px) {
+    border: none;
   }
 `;
 

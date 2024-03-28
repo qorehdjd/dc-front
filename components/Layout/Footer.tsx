@@ -34,6 +34,14 @@ const FooterBox = styled.footer`
       }
     }
   }
+  @media (max-width: 700px) {
+    > ul {
+      flex-direction: column;
+      li::after {
+        content: none;
+      }
+    }
+  }
 `;
 
 const Footer = () => {

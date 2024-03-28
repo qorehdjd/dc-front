@@ -21,6 +21,11 @@ const LoginHeaderLayout = styled.header`
     position: relative;
     top: 2px;
   }
+  @media (max-width: 700px) {
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 const LoginHeader = () => {

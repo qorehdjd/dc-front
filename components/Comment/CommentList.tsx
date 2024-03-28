@@ -35,11 +35,15 @@ const CommentPagenationBox = styled.div`
     }
   }
   .comment_nav_btn_box {
+    display: flex;
     button {
+      display: flex;
+      align-items: center;
       background-color: white;
       border: none;
       font-weight: 600;
       font-size: 1.3rem;
+      white-space: nowrap;
     }
     button::after {
       content: '';

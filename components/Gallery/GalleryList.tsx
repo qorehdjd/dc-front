@@ -134,6 +134,7 @@ const GalleryListWrapper = styled.ul`
     }
     .writer {
       flex: 3;
+      white-space: nowrap;
     }
     .num {
       flex: 1;

@@ -42,6 +42,13 @@ const HeaderBox = styled.header`
       vertical-align: 1px;
     }
   }
+  @media (max-width: 1050px) {
+    width: 100%;
+    justify-content: center;
+    ul {
+      display: none;
+    }
+  }
 `;
 
 const PostHeader = () => {

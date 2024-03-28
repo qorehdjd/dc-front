@@ -45,6 +45,15 @@ const NavBox = styled.nav`
       font-weight: 600;
     }
   }
+  @media (max-width: 1050px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* @media (max-width: 600px) {
+    display: none;
+  } */
 `;
 
 const Nav = () => {

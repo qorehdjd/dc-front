@@ -11,6 +11,9 @@ import { addPost } from '@/reducers/post';
 
 const PostFormSection = styled.section`
   margin: 0 19rem;
+  @media (max-width: 800px) {
+    margin: 0;
+  }
 `;
 
 const Header = styled.header`
@@ -61,6 +64,9 @@ const Header = styled.header`
       content: none;
     }
   }
+  @media (max-width: 1050px) {
+    flex-direction: column;
+  }
 `;
 
 const Article = styled.article`
@@ -91,6 +97,14 @@ const Article = styled.article`
     > input {
       min-width: 200px;
       padding: 0.5rem 1rem;
+    }
+
+    @media (max-width: 1050px) {
+      flex-direction: column;
+      .user_name {
+        margin-right: 0;
+        margin-bottom: 1rem;
+      }
     }
   }
   .title_input {

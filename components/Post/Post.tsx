@@ -71,6 +71,9 @@ const PostSection = styled.section`
       word-wrap: break-word;
     }
     .con_banner {
+      @media (max-width: 1050px) {
+        display: none;
+      }
     }
   }
   .rec_nft_btn_box {
@@ -171,6 +174,10 @@ const PostSection = styled.section`
         }
       }
     }
+
+    @media (max-width: 1050px) {
+      margin: 3rem 0;
+    }
   }
 `;
 
@@ -192,6 +199,24 @@ const CommentBtnBottomBox = styled.div`
     }
     .revise > a {
       color: white;
+    }
+  }
+  @media (max-width: 1050px) {
+    flex-direction: column;
+    .left_btn_box,
+    .write_box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      button {
+        width: 100%;
+        color: #000000;
+        background-color: #fff;
+      }
+      button:hover {
+        background-color: #3b4890;
+        color: #fff;
+      }
     }
   }
 `;

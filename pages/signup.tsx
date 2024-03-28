@@ -23,15 +23,20 @@ type UserInfo = {
 };
 
 const SignupLayout = styled.div`
-  margin: 0 520px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   header {
   }
   form {
+    display: flex;
+    flex-direction: column;
     margin-top: 3rem;
+    width: 100%;
+    max-width: 500px;
     input {
-      width: 500px;
+      width: 100%;
+      max-width: 500px;
       height: 50px;
       outline: none;
       padding: 0 1rem;
@@ -39,7 +44,8 @@ const SignupLayout = styled.div`
       border: 1px solid #dfdfdf;
     }
     .signup_btn {
-      width: 500px;
+      width: 100%;
+      max-width: 500px;
       height: 50px;
       background: #3b4890;
       border-color: #29367c;

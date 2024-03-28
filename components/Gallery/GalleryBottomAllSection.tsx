@@ -38,6 +38,9 @@ const AllGallerySection = styled.section<{ width: string }>`
       cursor: text;
     }
   }
+  @media (max-width: 1050px) {
+    display: none;
+  }
 `;
 
 const NightModeAndPageUpBtnBox = styled.div<{ width: string }>`
@@ -71,6 +74,9 @@ const NightModeAndPageUpBtnBox = styled.div<{ width: string }>`
       text-decoration: underline;
       text-underline-offset: 2px;
     }
+  }
+  @media (max-width: 1050px) {
+    display: none;
   }
 `;
 

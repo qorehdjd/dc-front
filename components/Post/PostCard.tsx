@@ -5,6 +5,13 @@ import styled from 'styled-components';
 const PostBox = styled.article`
   border-bottom: 1px #e4e4e4 solid;
   display: flex;
+  &:hover {
+    cursor: pointer;
+    .title {
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+  }
   .right_text_box {
     margin-left: 1.5rem;
     margin-top: 2rem;

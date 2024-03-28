@@ -12,7 +12,12 @@ import GalleryBottomAllSection from '@/components/Gallery/GalleryBottomAllSectio
 import GalleryList from '@/components/Gallery/GalleryList';
 
 const PostLayout = styled.div`
-  margin: 0 19rem;
+  margin: 0 21rem;
+  @media (max-width: 1050px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const GalleryListBox = styled.article`

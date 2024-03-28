@@ -69,6 +69,9 @@ const AsideBox = styled.aside`
     flex: 1;
     cursor: pointer;
   }
+  @media (max-width: 1250px) {
+    display: none;
+  }
 `;
 
 const Aside = () => {

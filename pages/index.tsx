@@ -14,6 +14,9 @@ const PostBoxSection = styled.section`
   grid-template-columns: 1fr 1fr;
   row-gap: 3px;
   column-gap: 3px;
+  @media (max-width: 700px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 const ContentTextList = styled.ul`
@@ -22,9 +25,21 @@ const ContentTextList = styled.ul`
   margin: 1rem 0;
   row-gap: 6px;
   font-size: 1.1rem;
-  span {
-    margin-right: 0.3rem;
-    font-weight: 600;
+  li {
+    .title {
+      margin-right: 0.3rem;
+      font-weight: 600;
+    }
+  }
+  li .content:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  @media (max-width: 700px) {
+    grid-template-columns: 1fr;
+    li {
+    }
   }
 `;
 
@@ -35,6 +50,12 @@ const HotGalleryRankingBox = styled.section`
     margin-right: 2rem;
     flex: 2.5;
     border: 1px #d5d5d5 solid;
+  }
+  @media (max-width: 700px) {
+    flex-direction: column;
+    .left_cate_box {
+      width: 100%;
+    }
   }
 `;
 
@@ -66,34 +87,44 @@ const Home = () => {
         </PostBoxSection>
         <ContentTextList>
           <li>
-            <span>[해갤]</span>손흥민 `우리도 거칠게 하자`ㅋㅋㅋㅋㅋ
+            <span className='title'>[해갤]</span>
+            <span className='content'>손흥민 `우리도 거칠게 하자`ㅋㅋㅋㅋㅋ</span>
           </li>
           <li>
-            <span>[나갤]</span>이거 제작진이 밑줄도 그어놨음ㅋㅋㅋㅋㅋ
+            <span className='title'>[나갤]</span>
+            <span className='content'>이거 제작진이 밑줄도 그어놨음ㅋㅋㅋㅋㅋ</span>
           </li>
           <li>
-            <span>[해갤]</span>손흥민 `우리도 거칠게 하자`ㅋㅋㅋㅋㅋ
+            <span className='title'>[해갤]</span>
+            <span className='content'>손흥민 `우리도 거칠게 하자`ㅋㅋㅋㅋㅋ</span>
           </li>
           <li>
-            <span>[주갤]</span>이거 제작진이 밑줄도 그어놨음ㅋㅋㅋㅋㅋ
+            <span className='title'>[주갤]</span>
+            <span className='content'>이거 제작진이 밑줄도 그어놨음ㅋㅋㅋㅋㅋ</span>
           </li>
           <li>
-            <span>[해갤]</span>손흥민 `우리도 거칠게 하자`ㅋㅋㅋㅋㅋ
+            <span className='title'>[해갤]</span>
+            <span className='content'>손흥민 `우리도 거칠게 하자`ㅋㅋㅋㅋㅋ</span>
           </li>
           <li>
-            <span>[나갤]</span>이거 제작진이 밑줄도 그어놨음ㅋㅋㅋㅋㅋ
+            <span className='title'>[나갤]</span>
+            <span className='content'>손흥민 `우리도 거칠게 하자`ㅋㅋㅋㅋㅋ</span>
           </li>
           <li>
-            <span>[주갤]</span>손흥민 `우리도 거칠게 하자`ㅋㅋㅋㅋㅋ
+            <span className='title'>[주갤]</span>
+            <span className='content'>손흥민 `우리도 거칠게 하자`ㅋㅋㅋㅋㅋ</span>
           </li>
           <li>
-            <span>[키갤]</span>이거 제작진이 밑줄도 그어놨음ㅋㅋㅋㅋㅋ
+            <span className='title'>[키갤]</span>
+            <span className='content'>이거 제작진이 밑줄도 그어놨음ㅋㅋㅋㅋㅋ</span>
           </li>
           <li>
-            <span>[국갤]</span>손흥민 `리도 거칠게 하자`ㅋㅋㅋㅋㅋ
+            <span className='title'>[국갤]</span>
+            <span className='content'>손흥민 우리도 거칠게 하자ㅋㅋㅋㅋㅋ</span>
           </li>
           <li>
-            <span>[기음]</span>이거 제작진이 밑줄도 그어놨음ㅋㅋㅋㅋㅋ
+            <span className='title'>[기음]</span>
+            <span className='content'>이거 제작진이 밑줄도 그어놨음ㅋㅋㅋㅋㅋ</span>
           </li>
         </ContentTextList>
         <HotGalleryRankingBox>

@@ -11,6 +11,9 @@ import { revisePost } from '@/reducers/post';
 
 const RevisePostFormSection = styled.section`
   margin: 0 19rem;
+  @media (max-width: 800px) {
+    margin: 0;
+  }
 `;
 
 const Header = styled.header`
@@ -18,6 +21,7 @@ const Header = styled.header`
   justify-content: space-between;
   align-items: center;
   padding: 2rem 0 1rem 0;
+  white-space: nowrap;
   h1 {
     font-size: 2.3rem;
     color: #29367c;
@@ -61,6 +65,9 @@ const Header = styled.header`
       content: none;
     }
   }
+  @media (max-width: 1050px) {
+    flex-direction: column;
+  }
 `;
 
 const Article = styled.article`
@@ -71,9 +78,12 @@ const Article = styled.article`
   flex-direction: column;
   .user_name_box {
     display: flex;
+    width: 100%;
+    max-width: 200px;
     .user_name {
       border: 1px solid black;
-      min-width: 100px;
+      width: 100%;
+      max-width: 200px;
       padding: 5px 12px;
       display: flex;
       justify-content: space-between;
@@ -121,6 +131,8 @@ const Article = styled.article`
     outline: none;
     padding: 1rem;
     margin-top: 1rem;
+    width: 100%;
+    height: 400px;
   }
   .write_type_box {
     display: flex;
@@ -308,7 +320,7 @@ const RevisePostForm = () => {
             </span>
           </p>
         </div>
-        <textarea style={{ height: '400px' }} value={content} onChange={onChangeContent}></textarea>
+        <textarea value={content} onChange={onChangeContent}></textarea>
         <div className='write_type_box'>
           <div className='left_box'>
             <span className='age'>19</span>

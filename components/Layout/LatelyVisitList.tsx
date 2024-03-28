@@ -50,6 +50,9 @@ const LatelyVisitListBox = styled.div`
       }
     }
   }
+  @media (max-width: 1050px) {
+    display: none;
+  }
 `;
 
 const LatelyVisitList = () => {

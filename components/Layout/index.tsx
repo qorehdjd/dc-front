@@ -37,7 +37,6 @@ export const MainBox = styled.main`
   margin-top: 2rem;
   > section {
     flex: 2.5;
-    min-width: 600px;
     .header_box {
       display: flex;
       justify-content: space-between;
@@ -70,6 +69,9 @@ export const MainBox = styled.main`
       }
     }
   }
+  /* @media (max-width: 1050px) {
+    margin: 0;
+  } */
 `;
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
