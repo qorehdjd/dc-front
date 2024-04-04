@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import Image from 'next/image';
 import styled from 'styled-components';
 
@@ -23,8 +23,12 @@ const PostBox = styled.article`
 `;
 
 const PostCard = () => {
+  const onClickPostBox = useCallback(() => {
+    alert('흥한 갤러리의 리그오브레전드 갤러리를 이용해주세요');
+  }, []);
+
   return (
-    <PostBox>
+    <PostBox onClick={onClickPostBox}>
       <div>
         <Image src='/img/postImg.jpg' width={115} height={67} alt='포스트 이미지' />
       </div>

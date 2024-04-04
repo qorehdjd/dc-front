@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import styled from 'styled-components';
 import { IoMdArrowDropleft, IoMdArrowDropright } from 'react-icons/io';
 
@@ -60,6 +60,10 @@ const HotGalleryRankingBox = styled.section`
 `;
 
 const Home = () => {
+  const onClickContentList = useCallback(() => {
+    alert('흥한 갤러리의 리그오브레전드 갤러리를 이용해주세요');
+  }, []);
+
   return (
     <Layout>
       <section>
@@ -88,43 +92,63 @@ const Home = () => {
         <ContentTextList>
           <li>
             <span className='title'>[해갤]</span>
-            <span className='content'>손흥민 `우리도 거칠게 하자`ㅋㅋㅋㅋㅋ</span>
+            <span className='content' onClick={onClickContentList}>
+              손흥민 `우리도 거칠게 하자`ㅋㅋㅋㅋㅋ
+            </span>
           </li>
           <li>
             <span className='title'>[나갤]</span>
-            <span className='content'>이거 제작진이 밑줄도 그어놨음ㅋㅋㅋㅋㅋ</span>
+            <span className='content' onClick={onClickContentList}>
+              이거 제작진이 밑줄도 그어놨음ㅋㅋㅋㅋㅋ
+            </span>
           </li>
           <li>
             <span className='title'>[해갤]</span>
-            <span className='content'>손흥민 `우리도 거칠게 하자`ㅋㅋㅋㅋㅋ</span>
+            <span className='content' onClick={onClickContentList}>
+              손흥민 `우리도 거칠게 하자`ㅋㅋㅋㅋㅋ
+            </span>
           </li>
           <li>
             <span className='title'>[주갤]</span>
-            <span className='content'>이거 제작진이 밑줄도 그어놨음ㅋㅋㅋㅋㅋ</span>
+            <span className='content' onClick={onClickContentList}>
+              이거 제작진이 밑줄도 그어놨음ㅋㅋㅋㅋㅋ
+            </span>
           </li>
           <li>
             <span className='title'>[해갤]</span>
-            <span className='content'>손흥민 `우리도 거칠게 하자`ㅋㅋㅋㅋㅋ</span>
+            <span className='content' onClick={onClickContentList}>
+              손흥민 `우리도 거칠게 하자`ㅋㅋㅋㅋㅋ
+            </span>
           </li>
           <li>
             <span className='title'>[나갤]</span>
-            <span className='content'>손흥민 `우리도 거칠게 하자`ㅋㅋㅋㅋㅋ</span>
+            <span className='content' onClick={onClickContentList}>
+              손흥민 `우리도 거칠게 하자`ㅋㅋㅋㅋㅋ
+            </span>
           </li>
           <li>
             <span className='title'>[주갤]</span>
-            <span className='content'>손흥민 `우리도 거칠게 하자`ㅋㅋㅋㅋㅋ</span>
+            <span className='content' onClick={onClickContentList}>
+              손흥민 `우리도 거칠게 하자`ㅋㅋㅋㅋㅋ
+            </span>
           </li>
           <li>
             <span className='title'>[키갤]</span>
-            <span className='content'>이거 제작진이 밑줄도 그어놨음ㅋㅋㅋㅋㅋ</span>
+            <span className='content' onClick={onClickContentList}>
+              이거 제작진이 밑줄도 그어놨음ㅋㅋㅋㅋㅋ
+            </span>
           </li>
           <li>
             <span className='title'>[국갤]</span>
-            <span className='content'>손흥민 우리도 거칠게 하자ㅋㅋㅋㅋㅋ</span>
+            <span className='content' onClick={onClickContentList}>
+              손흥민 우리도 거칠게 하자ㅋㅋㅋㅋㅋ
+            </span>
           </li>
           <li>
             <span className='title'>[기음]</span>
-            <span className='content'>이거 제작진이 밑줄도 그어놨음ㅋㅋㅋㅋㅋ</span>
+            <span className='content' onClick={onClickContentList}>
+              이거 제작진이 밑줄도 그어놨음ㅋㅋㅋㅋㅋ
+            </span>
           </li>
         </ContentTextList>
         <HotGalleryRankingBox>
