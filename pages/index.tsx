@@ -7,6 +7,7 @@ import Layout from '@/components/Layout';
 import HotGalleryLankingList from '@/components/HotGallery/HotGalleryLankingList';
 import HotGalleryLankingHeader from '@/components/HotGallery/HotGalleryLankingHeader';
 import HotGalleryLightCateList from '@/components/HotGallery/HotGalleryLightCateList';
+import PreviewPost from '@/components/Post/PreviewPost';
 
 const PostBoxSection = styled.section`
   margin-top: 1rem;
@@ -59,11 +60,28 @@ const HotGalleryRankingBox = styled.section`
   }
 `;
 
-const Home = () => {
-  const onClickContentList = useCallback(() => {
-    alert('흥한 갤러리의 리그오브레전드 갤러리를 이용해주세요');
-  }, []);
+const posts = [
+  { id: 1, title: '해갤', content: '안녕하세요ㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎ' },
+  { id: 2, title: '주갤', content: '가보즈아!!!!!!!!!!!!!!!!!!!' },
+  { id: 3, title: '축구갤', content: '손흥민 골!!!!!!!!!!!!!!!!!!!!' },
+  { id: 4, title: '해갤', content: '반가워요!!!~~~~~!!!!!!!!!!!!!' },
+  { id: 5, title: '중갤', content: '게임하실분!!!!!!!!!!!!!' },
+  { id: 6, title: '방갤', content: '좋은아침입니다!!!!!!!!!!!!1' },
+  { id: 7, title: '주갤', content: '요즘 주식시장 어떤가요?!!!!!!!!!!1' },
+  { id: 8, title: '구갤', content: '아 졸리다ㅜㅜㅜㅜㅜㅜㅜㅜㅜㅜㅜㅜㅜㅜㅜ' },
+  { id: 9, title: '프로그래밍갤', content: '질문 있습니다!!!!!!!!!!!!!!1' },
+  { id: 10, title: '주갤', content: '주식 엄청 떨어지네요ㅜㅜㅜㅜㅜㅜㅜㅜㅜㅜㅜㅜㅜ' },
+];
 
+const postCards = new Array(6).fill(undefined).map((_, index) => ({
+  id: index,
+  title: '영수 인스타 스토리 업뎃 ㄷㄷㄷ',
+  writer: '블랙핑크',
+  time: '08:24',
+  src: '/img/postImg.jpg',
+}));
+
+const Home = () => {
   return (
     <Layout>
       <section>
@@ -82,74 +100,14 @@ const Home = () => {
           </div>
         </div>
         <PostBoxSection>
-          <PostCard />
-          <PostCard />
-          <PostCard />
-          <PostCard />
-          <PostCard />
-          <PostCard />
+          {postCards.map((postCard) => (
+            <PostCard key={postCard.id} postCard={postCard} />
+          ))}
         </PostBoxSection>
         <ContentTextList>
-          <li>
-            <span className='title'>[해갤]</span>
-            <span className='content' onClick={onClickContentList}>
-              손흥민 `우리도 거칠게 하자`ㅋㅋㅋㅋㅋ
-            </span>
-          </li>
-          <li>
-            <span className='title'>[나갤]</span>
-            <span className='content' onClick={onClickContentList}>
-              이거 제작진이 밑줄도 그어놨음ㅋㅋㅋㅋㅋ
-            </span>
-          </li>
-          <li>
-            <span className='title'>[해갤]</span>
-            <span className='content' onClick={onClickContentList}>
-              손흥민 `우리도 거칠게 하자`ㅋㅋㅋㅋㅋ
-            </span>
-          </li>
-          <li>
-            <span className='title'>[주갤]</span>
-            <span className='content' onClick={onClickContentList}>
-              이거 제작진이 밑줄도 그어놨음ㅋㅋㅋㅋㅋ
-            </span>
-          </li>
-          <li>
-            <span className='title'>[해갤]</span>
-            <span className='content' onClick={onClickContentList}>
-              손흥민 `우리도 거칠게 하자`ㅋㅋㅋㅋㅋ
-            </span>
-          </li>
-          <li>
-            <span className='title'>[나갤]</span>
-            <span className='content' onClick={onClickContentList}>
-              손흥민 `우리도 거칠게 하자`ㅋㅋㅋㅋㅋ
-            </span>
-          </li>
-          <li>
-            <span className='title'>[주갤]</span>
-            <span className='content' onClick={onClickContentList}>
-              손흥민 `우리도 거칠게 하자`ㅋㅋㅋㅋㅋ
-            </span>
-          </li>
-          <li>
-            <span className='title'>[키갤]</span>
-            <span className='content' onClick={onClickContentList}>
-              이거 제작진이 밑줄도 그어놨음ㅋㅋㅋㅋㅋ
-            </span>
-          </li>
-          <li>
-            <span className='title'>[국갤]</span>
-            <span className='content' onClick={onClickContentList}>
-              손흥민 우리도 거칠게 하자ㅋㅋㅋㅋㅋ
-            </span>
-          </li>
-          <li>
-            <span className='title'>[기음]</span>
-            <span className='content' onClick={onClickContentList}>
-              이거 제작진이 밑줄도 그어놨음ㅋㅋㅋㅋㅋ
-            </span>
-          </li>
+          {posts.map((post) => (
+            <PreviewPost key={post.id} post={post} />
+          ))}
         </ContentTextList>
         <HotGalleryRankingBox>
           <div className='left_cate_box'>

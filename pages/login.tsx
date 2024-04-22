@@ -146,7 +146,10 @@ const Login = () => {
   const dispatch = useDispatch<AppDispatch>();
   const countRef = useRef(0); // 요청 여러개 오는거 방지
 
-  const { me, loginLoading, loginDone, loginError } = useSelector((state: RootState) => state.user);
+  const me = useSelector((state: RootState) => state.user.me);
+  const loginLoading = useSelector((state: RootState) => state.user.loginLoading);
+  const loginDone = useSelector((state: RootState) => state.user.loginDone);
+  const loginError = useSelector((state: RootState) => state.user.loginError);
 
   const [id, setId] = useState('테스트');
   const [password, setPassword] = useState('!z123456');

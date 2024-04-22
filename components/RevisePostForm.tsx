@@ -222,7 +222,8 @@ const RevisePostForm = () => {
   const gallery = useSelector((state: RootState) => state.post.gallery);
   const post = useSelector((state: RootState) => state.post.gallery.singlePost);
   const me = useSelector((state: RootState) => state.user.me);
-  const { revisePostDone, revisePostError } = useSelector((state: RootState) => state.post);
+  const revisePostDone = useSelector((state: RootState) => state.post.revisePostDone);
+  const revisePostError = useSelector((state: RootState) => state.post.revisePostError);
 
   const [title, setTitle] = useState(post?.title);
   const [content, setContent] = useState(post?.content);

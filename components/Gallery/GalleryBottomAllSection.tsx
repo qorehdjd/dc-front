@@ -306,4 +306,4 @@ const GalleryBottomAllSection = ({ width }: { width: string }) => {
   );
 };
 
-export default GalleryBottomAllSection;
+export default React.memo(GalleryBottomAllSection);

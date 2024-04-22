@@ -222,7 +222,8 @@ const PostForm = () => {
 
   const gallery = useSelector((state: RootState) => state.post.gallery);
   const me = useSelector((state: RootState) => state.user.me);
-  const { addPostDone, addPostError } = useSelector((state: RootState) => state.post);
+  const addPostDone = useSelector((state: RootState) => state.post.addPostDone);
+  const addPostError = useSelector((state: RootState) => state.post.addPostError);
 
   const [password, setPassword] = useState('');
   const [title, setTitle] = useState('');

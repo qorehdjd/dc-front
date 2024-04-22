@@ -45,4 +45,4 @@ const HotGalleryLankingItem = ({ title, index }: { title: string; index: number 
   );
 };
 
-export default HotGalleryLankingItem;
+export default React.memo(HotGalleryLankingItem);

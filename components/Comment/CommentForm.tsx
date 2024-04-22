@@ -74,7 +74,8 @@ const CommentForm = () => {
   const dispatch = useDispatch<AppDispatch>();
   const countRef = useRef(0); // 요청 여러개 오는거 방지
 
-  const { addCommentDone, addCommentError } = useSelector((state: RootState) => state.post);
+  const addCommentDone = useSelector((state: RootState) => state.post.addCommentDone);
+  const addCommentError = useSelector((state: RootState) => state.post.addCommentError);
   const postId = useSelector((state: RootState) => state.post.gallery.singlePost?._id);
   const me = useSelector((state: RootState) => state.user.me);
 

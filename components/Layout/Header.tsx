@@ -127,7 +127,7 @@ const HeaderLayout = styled.header`
 const Header = () => {
   const dispatch = useDispatch<AppDispatch>();
 
-  const { me } = useSelector((state: RootState) => state.user);
+  const me = useSelector((state: RootState) => state.user.me);
 
   const onClickLogout = useCallback(() => {
     dispatch(logout());
@@ -165,7 +165,7 @@ const Header = () => {
         </li>
         <li className='login_btn'>
           {me ? (
-            <Link href='/login' onClick={onClickLogout}>
+            <Link href='/' onClick={onClickLogout}>
               로그아웃
             </Link>
           ) : (

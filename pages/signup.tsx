@@ -96,7 +96,8 @@ const Signup = () => {
   const dispatch = useDispatch<AppDispatch>();
 
   const me = useSelector((state: RootState) => state.user.me);
-  const { signupDone, signupError } = useSelector((state: RootState) => state.user);
+  const signupDone = useSelector((state: RootState) => state.user.signupDone);
+  const signupError = useSelector((state: RootState) => state.user.signupDone);
 
   const {
     register,

@@ -76,4 +76,4 @@ const LatelyVisitList = () => {
   );
 };
 
-export default LatelyVisitList;
+export default React.memo(LatelyVisitList);
