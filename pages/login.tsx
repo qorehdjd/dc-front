@@ -148,8 +148,8 @@ const Login = () => {
 
   const { me, loginLoading, loginDone, loginError } = useSelector((state: RootState) => state.user);
 
-  const [id, setId] = useState('');
-  const [password, setPassword] = useState('');
+  const [id, setId] = useState('테스트');
+  const [password, setPassword] = useState('!z123456');
   const [showLoginError, setShowLoginError] = useState(false);
 
   useEffect(() => {
